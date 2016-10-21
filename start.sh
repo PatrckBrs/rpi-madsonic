@@ -9,7 +9,7 @@ mkdir -p /config/playlists/backup
 mkdir -p /config/transcode
 
 #copy transcode to config directory - transcode directory is subdir of path set from --home flag, do not alter
-cp /var/madsonic/transcode/linux/* /config/transcode/
+#cp /var/madsonic/transcode/linux/* /config/transcode/
 
 if [ -z "$CONTEXT" ]; then
   CONTEXT=/
