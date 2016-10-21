@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM resin/rpi-raspbian:latest
 MAINTAINER madsonic (support@madsonic.org)
 
 # Let the container know that there is no tty
@@ -19,16 +19,18 @@ RUN usermod -u 99 nobody
 RUN usermod -g 100 nobody
 
 # Add Oracle Java8 Repo
-RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >> /etc/apt/sources.list.d/webupd8team-java.list \
-  && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 \
-  && echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+#RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >> /etc/apt/sources.list.d/webupd8team-java.list \
+#  && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 \
+#  && echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 
 # Install apt packages
 RUN apt-get update && apt-get install -y \
   ca-certificates \
   locales \
-  oracle-java8-installer \
-  oracle-java8-set-default \
+  oracle-java8-jdk \
+  default-jdk \
+#  oracle-java8-installer \
+#  oracle-java8-set-default \
   unzip \
   wget
 
