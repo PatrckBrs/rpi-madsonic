@@ -64,8 +64,8 @@ VOLUME /media
 # Copy start.sh script
 ADD ./start.sh /start.sh
 RUN chmod +x /start.sh
-RUN chown -R nobody:users /start.sh
+#RUN chown -R nobody:users /start.sh
 
 # run App as user
-USER nobody
+#USER nobody
 ENTRYPOINT ["/start.sh"]
