@@ -1,4 +1,4 @@
-Madsonic Debian docker image 
+Madsonic Raspberry Pi docker image 
 ============================
 
 **Application**
