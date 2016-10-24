@@ -29,8 +29,8 @@ HOME=/config
 
 MADSONIC_USER=nobody
 
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+export LANG=fr_FR.UTF-8
+export LC_ALL=fr_FR.UTF-8
 
 /usr/bin/madsonic --home=$HOME \
                   --host=$HOST \
