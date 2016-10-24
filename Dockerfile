@@ -29,8 +29,8 @@ RUN apt-get update && apt-get install -y \
 
 # download madsonic
 RUN mkdir -p /var/madsonic/transcode \
-  && wget -O /var/madsonic/madsonic.zip http://www.madsonic.org/download/${PKG_VER}/${PKG_DATE}_${PKG_NAME}-${PKG_VER}.${PKG_BUILD}-standalone.zip \
-  && wget -O /var/madsonic/transcode.zip http://www.madsonic.org/download/transcode/${PKG_DATE}_${PKG_NAME}-transcode-linux-x64.zip
+  && wget -O /var/madsonic/madsonic.zip http://www.madsonic.org/download/${PKG_VER}/${PKG_DATE}_${PKG_NAME}-${PKG_VER}.${PKG_BUILD}-standalone.zip #\
+#  && wget -O /var/madsonic/transcode.zip http://www.madsonic.org/download/transcode/${PKG_DATE}_${PKG_NAME}-transcode-linux-x64.zip
 
 # Install Madsonic
 RUN mkdir -p /var/madsonic/transcode \
